@@ -1,1 +1,38 @@
-<p>proteins-view works!</p>
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Information</h1>
+        <p class="lead text-muted">Below is the information associated with each of the pdb that allowed the
+          reconstruction.</p>
+      </div>
+    </div>
+  </section>
+
+<div class="album py-5 bg-light">
+    <div class="container-fluid">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div *ngFor="let item of pdb_list; let i = index" class="col">
+                <div class="card shadow-sm">
+                    <div id="{{item[0]}}" style="width:100%; height: 30vh;"></div>
+                    <div class="card-body">
+                        <p class="card-text">The name of pdb is: <b>{{item[1]}}</b>, for more information about this you can visit:
+                            <a href="https://www.rcsb.org/structure/{{item[1]}}" target="_blank">PDB</a>
+                        </p>
+                        <ngb-accordion #acc="ngbAccordion">
+                            <ngb-panel *ngFor="let code of item[2]; let j = index" title="Appearance {{j}}">
+                                <ng-template ngbPanelContent>
+                                    <h3>Transformations in ChimeraX</h3>
+                                    <textarea highlight-js [options]="{}" [lang]="'typescript'">
+                                        {{code}}
+                                    </textarea>
+                                </ng-template>
+                            </ngb-panel>
+                        </ngb-accordion>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

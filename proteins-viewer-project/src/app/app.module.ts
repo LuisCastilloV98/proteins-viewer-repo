@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PrincipalViewComponent } from './principal-view/principal-view.component';
 import { ProteinsViewComponent } from './proteins-view/proteins-view.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HighlightJsModule } from 'ngx-highlight-js';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { ProteinsViewComponent } from './proteins-view/proteins-view.component';
     ProteinsViewComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule,
+    HighlightJsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
