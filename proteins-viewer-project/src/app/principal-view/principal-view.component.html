@@ -1,9 +1,31 @@
 <section>
     <div class="container-fluid">
         <div class="d-flex justify-content-between" style="height: 100vh">
-            <div class="col-9 border border-primary rounded px-0 py-0 mr-1">
-                <div id="viewport" style="width:100%; height:100%;"></div>
-            </div>
+            <div class="col-10 border border-primary rounded px-0 py-0 mr-1">
+                
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">BV</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            View mode
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+
+                  <div id="viewport" style="width:100%; height:94%;"></div>
+                </div>
             <div class="col-2 border border-primary rounded">
                 <div class="rounded">
                     <label for="input1">Data 1:</label>
