@@ -2,27 +2,55 @@
     <div class="container-fluid">
         <div class="d-flex justify-content-between" style="height: 100vh">
             <div class="col-10 border border-primary rounded px-0 py-0 mr-1">
-                
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">BV</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                      <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            View mode
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">BV</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#principalViewNavbarNavDropdown" aria-controls="principalViewNavbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="principalViewNavbarNavDropdown">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        File
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">
+                          <div class="form-group">
+                            <input type="file" id="file" (change)="handleFileInput($event.target.files)" multiple>
                           </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </nav>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <div class="form-group">
+                            <input type="file" id="file_pdb" (change)="handleFileInputPDB($event.target.files)" multiple>
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <div class="form-group">
+                            <input type="file" id="file_mrc" (change)="handleFileInputMRC($event.target.files)" multiple>
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="#" (click)="saveImage()">Save image</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        View
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#" (click)="viewCenter()">Center</a>
+                        <a class="dropdown-item" href="#" (click)="viewToggleSpin()">Toggle Spin</a>
+                        <a class="dropdown-item" href="#" (click)="viewToggleRock()">Toggle Rock</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" (click)="testFuntion()">Test</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
 
                   <div id="viewport" style="width:100%; height:94%;"></div>
                 </div>
